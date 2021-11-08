@@ -1,0 +1,87 @@
+body {
+    background-image: url(blurry-gradient-haikei.svg);
+    background-size: cover;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div {
+    position: fixed;
+    top: 120px;
+    color: white;
+    width: 70vw;
+    text-align: center;
+    margin: 30px;
+}
+
+button {
+    position: fixed;
+    bottom: 20vh;
+    background-color: transparent;
+    border: none;
+    transition: 300ms ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+    transition: 300ms ease-in-out;
+    transform: scale(1.1);
+}
+
+button img {
+    height: 100px;
+}
+
+.cat {
+    position: fixed;
+    height: 90px;
+    animation:spin 8s linear infinite;
+    filter: invert(1);
+}
+
+.cat1 {
+    bottom: 30px;
+    right: 30px;
+}
+
+.cat2 {
+    bottom: 30px;
+    left: 30px;
+}
+
+.cat3 {
+    animation: walk 15s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        transform:rotate(360deg); 
+    } 
+}
+
+@keyframes walk {
+    0% {
+        top: 20px;
+        left: -100px;
+    }
+
+    100% {
+        top: 20px;
+        left: 110vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+      bottom: 80px;
+    }
+    
+    body {
+        font-size: 1.3em;
+    }
+  }
